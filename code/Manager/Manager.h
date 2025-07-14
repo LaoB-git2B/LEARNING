@@ -9,9 +9,10 @@ class Manager {
 public:
     void init() {
         string things = " 0 ";
+        string thinges = " 0 ";
         string name = " 0 ";
         string language = " 0 ";
-        ifs.open("manager.txt", ios::in);
+        ifs.open("code/Manager/manager.txt", ios::in);
         if (!ifs.is_open())
         {
             cout << "Error" << endl;
@@ -25,22 +26,38 @@ public:
                 cout << "What is your name? > ";
                 getline(cin, name);
                 cout << endl << "Oh, what a beautiful name!" << endl;
-                cout << "Now, what're your language? > ";
+                cout << "Now, what're your language?"
+                << " (1 = English, 2 = 中文) " <<
+                "(now = 1) > ";
                 getline(cin, language);
-                ofs.open("manager.txt", ios::out);
-                ofs.write((const char*)"true", sizeof("true"));
-                ofs.write((const char *)&name, sizeof(name));
-                ofs.write((const char *)&language, sizeof(language));
+                ofs.open("code/Manager/manager.txt", ios::out);
+                ofs << "true" << endl;
+                ofs << name << endl;
+                ofs << language << endl;
                 ofs.close();
+                return;
             }
             else if (things == "true")
             {
-                
+                continue;
+            }
+            else if (things == "1")
+            {
+                language = 1;
+            }
+            else if (things == "2")
+            {
+                language = 2;
+            }
+            else
+            {
+                cout << "Welcome " << things << endl;
             }
         }
         ifs.close();
     }
 private:
+    int lanaguage;
     ofstream ofs;
     ifstream ifs;
 };
