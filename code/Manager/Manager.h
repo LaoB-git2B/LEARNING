@@ -3,6 +3,8 @@
 #include <fstream>
 using namespace std;
 
+#pragma once
+
 class Manager {
 public:
     void init() {
