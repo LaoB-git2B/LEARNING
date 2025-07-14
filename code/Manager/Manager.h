@@ -8,6 +8,7 @@ using namespace std;
 class Manager {
 public:
     void init() {
+        // TODO:
         string things = " 0 ";
         string thinges = " 0 ";
         string name = " 0 ";
