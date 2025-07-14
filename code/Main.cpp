@@ -1,7 +1,7 @@
-#include "../Manager/Manager.h"
+#include "code/Manager/Manager.h"
 
 int main(void) {
     Manager mge;
     mge.init();
     return 0;
-} // use g++ Main.cpp -o LEARNING.exe
+} // use g++ code/Main.cpp -o LEARNING.exe
