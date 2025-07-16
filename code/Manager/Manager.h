@@ -39,7 +39,7 @@ void Manager::init() {
             ofs.open("code/Manager/manager.txt", ios::out);
             ofs << "!true" << endl;
             ofs << name << endl;
-            ofs << language << endl;
+            ofs << language;
             ofs.close();
             ifs.close();
             return;
@@ -56,9 +56,13 @@ void Manager::init() {
         {
             language = 2;
         }
-        else if (things != "1" || "2" || "!true")
+        else if (things != "2" || "!true")
         {
             cout << "Welcome " << things << endl;
+        }
+        else if (things != "1" || "!true")
+        {
+            cout << "欢迎 " << things << endl;
         }
     }
     ifs.close();
