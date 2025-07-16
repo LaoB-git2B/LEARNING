@@ -2,6 +2,7 @@
 
 int main(void) {
     system("chcp 65001");
+    system("cls");
     Manager mge;
     mge.init();
     return 0;
