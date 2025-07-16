@@ -9,6 +9,8 @@ using namespace std;
 #define C_INIT_ONE "选择学习的内容：\n1) Python\n2) C\n3) C++\n4) Java\n(请输入数字，现在为1)\n> " 
 #define E_BEGIN_ERROR "This is not what this software offers"
 #define C_BEGIN_ERROR "这不是此软件提供的内容"
+#define E_BEGIN_PYTHON_ONE ""
+#define C_BEGIN_PYTHON_ONE ""
 
 class Manager {
 public:
@@ -91,11 +93,11 @@ void Manager::begin() {
     {
         if (lanaguage == 1)
         {
-            
+            cout << E_BEGIN_PYTHON_ONE << endl;
         }
         if (lanaguage == 2)
         {
-            
+            cout << C_BEGIN_PYTHON_ONE << endl;
         }
     }
     else if (thing == "2")
