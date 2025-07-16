@@ -15,9 +15,7 @@ private:
 };
 
 void Manager::init() {
-    // TODO:
     string things = " 0 ";
-    string thinges = " 0 ";
     string name = " 0 ";
     string language = " 0 ";
     ifs.open("code/Manager/manager.txt", ios::in);
@@ -28,7 +26,7 @@ void Manager::init() {
     }
     while (ifs >> things)
     {
-        if (things == "false")
+        if (things == "!false")
         {
             cout << "Hello, you open the me first." << endl;
             cout << "What is your name? > ";
@@ -39,13 +37,14 @@ void Manager::init() {
             "(now = 1) > ";
             getline(cin, language);
             ofs.open("code/Manager/manager.txt", ios::out);
-            ofs << "true" << endl;
+            ofs << "!true" << endl;
             ofs << name << endl;
             ofs << language << endl;
             ofs.close();
+            ifs.close();
             return;
         }
-        else if (things == "true")
+        else if (things == "!true")
         {
             continue;
         }
@@ -57,7 +56,7 @@ void Manager::init() {
         {
             language = 2;
         }
-        else
+        else if (things != "1" || "2" || "!true")
         {
             cout << "Welcome " << things << endl;
         }
