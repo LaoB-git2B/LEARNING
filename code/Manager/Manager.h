@@ -5,9 +5,13 @@ using namespace std;
 
 #pragma once
 
+#define E_INIT_ONE ""
+#define C_INIT_ONE ""
+
 class Manager {
 public:
     void init();
+    void begin();
 private:
     int lanaguage;
     ofstream ofs;
@@ -59,11 +63,21 @@ void Manager::init() {
         else if (things != "2" || "!true")
         {
             cout << "Welcome " << things << endl;
+            language = 1;
+            cout << E_INIT_ONE << endl;
+            begin();
         }
         else if (things != "1" || "!true")
         {
             cout << "欢迎 " << things << endl;
+            language = 2;
+            cout << C_INIT_ONE << endl;
+            begin();
         }
     }
     ifs.close();
+}
+
+void Manager::begin() {
+    
 }
