@@ -5,8 +5,8 @@ using namespace std;
 
 #pragma once
 
-#define E_INIT_ONE "Choose what you're studying:\n1) Python\n2) C\n3) C++\n4) Java\n(Please enter a number and now = 1)> "
-#define C_INIT_ONE "选择学习的内容：\n1) Python\n2) C\n3) C++\n4) Java\n(请输入数字，现在为1)> " 
+#define E_INIT_ONE "Choose what you're studying:\n1) Python\n2) C\n3) C++\n4) Java\n(Please enter a number and now = 1)\n> "
+#define C_INIT_ONE "选择学习的内容：\n1) Python\n2) C\n3) C++\n4) Java\n(请输入数字，现在为1)\n> " 
 #define E_BEGIN_ERROR "This is not what this software offers"
 #define C_BEGIN_ERROR "这不是此软件提供的内容"
 
@@ -46,7 +46,7 @@ void Manager::init() {
             ofs.open("code/Manager/manager.txt", ios::out);
             ofs << "!true" << endl;
             ofs << name << endl;
-            ofs << language;
+            ofs << lanaguage;
             ofs.close();
             ifs.close();
             return;
@@ -58,23 +58,23 @@ void Manager::init() {
         else if (things == "1")
         {
             language = 1;
+            lanaguage = 1;
         }
         else if (things == "2")
         {
             language = 2;
+            lanaguage = 2;
         }
         else if (things != "2" || "!true")
         {
             cout << "Welcome " << things << endl;
-            lanaguage = 1;
-            cout << E_INIT_ONE << endl;
+            cout << E_INIT_ONE;
             begin();
         }
         else if (things != "1" || "!true")
         {
             cout << "欢迎 " << things << endl;
-            lanaguage = 2;
-            cout << C_INIT_ONE << endl;
+            cout << C_INIT_ONE;
             begin();
         }
     }
