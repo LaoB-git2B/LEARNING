@@ -45,8 +45,8 @@ void Manager::init() {
             getline(cin, language);
             ofs.open("code/Manager/manager.txt", ios::out);
             ofs << "!true" << endl;
-            ofs << name << endl;
-            ofs << lanaguage;
+            ofs << "!!" << language << endl;
+            ofs << name;
             ofs.close();
             ifs.close();
             return;
@@ -55,27 +55,30 @@ void Manager::init() {
         {
             continue;
         }
-        else if (things == "1")
+        else if (things == "!!1")
         {
-            language = 1;
             lanaguage = 1;
         }
-        else if (things == "2")
+        else if (things == "!!2")
         {
-            language = 2;
             lanaguage = 2;
         }
-        else if (things != "2" || "!true")
+        else if (lanaguage == 1)
         {
             cout << "Welcome " << things << endl;
             cout << E_INIT_ONE;
             begin();
         }
-        else if (things != "1" || "!true")
+        else if (lanaguage == 2)
         {
             cout << "欢迎 " << things << endl;
             cout << C_INIT_ONE;
             begin();
+        }
+        else
+        {
+            cout << lanaguage << " " << language;
+            cin >> name;
         }
     }
     ifs.close();
