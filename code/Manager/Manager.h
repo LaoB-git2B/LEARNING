@@ -92,8 +92,12 @@ void Manager::init() {
 }
 
 void Manager::begin() {
-    string thing = "";
+    string thing = "1";
     getline(cin, thing);
+    if (thing != " ")
+    {
+        thing = "1";
+    }
     if (thing == "1")
     {
         if (lanaguage == 1)
