@@ -14,8 +14,8 @@ using namespace std;
 #define C_BEGIN_PYTHON_ONE "下载Python：\nPython有许多版本。\n在此教程制作时Python的最新版本为3.13.5。\n我们以最新版本为例。\n第一，请先从浏览器中打开https://www.python.org/网址。\n"
 #define E_BEGIN_PYTHON_TWO "Second, move your mouse over the Downloads button at this point. Choose your own operating system. The latest version of Windows is displayed by default on the right. macOS users click on the macOS button on the left to choose the version that suits them."
 #define C_BEGIN_PYTHON_TWO "第二，此时将鼠标移到Downloads按钮上。选择自己的操作系统。右边默认显示出Windows的最新版本。macOS用户点击左侧macOS按钮以选择适合自己的版本。"
-#define E_BEGIN_PYTHON_THREE ""
-#define C_BEGIN_PYTHON_THREE ""
+#define E_BEGIN_PYTHON_THREE "After downloading the installer, double-click to run it, and check both of the following checkboxes. Click the Customize installation button to customize the installation."
+#define C_BEGIN_PYTHON_THREE "下载好安装程序后双击运行，把下面的两个复选框都勾选上。点击Customize installation按钮进行自定义安装。"
 
 class Manager {
 public:
